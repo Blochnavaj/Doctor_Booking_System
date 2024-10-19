@@ -1,8 +1,7 @@
 import React from 'react';
 import Navbar from './Components/Navbar'; // Keep this import
 import { Route, Routes } from 'react-router-dom';
-// import Home from './Pages/Home';
-// import About from './Pages/About';
+import About from './Pages/About';
 import Doctor from './Pages/Doctor';
 import Login from './Pages/Login';
 import MyAppointments from './Pages/MyAppointments';
@@ -11,6 +10,7 @@ import Contact from './Pages/Contact';
 import SignUp from './Pages/SignUp';
 import Appointments from './Pages/Appointments';
 import NotFound from './Pages/NotFound';
+import Home from './Pages/Home';
 // import Footer from './Components/Footer'; // Keep this import
 
 function App() {
@@ -19,6 +19,9 @@ function App() {
       <div className='mx-4 sm:mx-[10%]'>
         <Navbar />
         <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/about' element={<About/>} />
+
           <Route path='/contact' element={<Contact />} />
           <Route path='/doctor' element={<Doctor />} />
           <Route path='/doctor/:speciality' element={<Doctor />} />
