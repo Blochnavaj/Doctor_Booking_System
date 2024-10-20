@@ -36,7 +36,7 @@ function Doctor() {
       <div className='w-full grid grid-cols-auto gap-4 px-4'>  
         {filteredDoctors.map((item, index) => (
           <div
-            onClick={() => navigate(`/appiontments/${item._id}`)}
+            onClick={() => navigate(`/appointments/${item._id}`)}
             className='border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500'
             key={index}
           >
