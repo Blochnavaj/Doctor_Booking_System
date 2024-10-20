@@ -11,6 +11,7 @@ import SignUp from './Pages/SignUp';
 import Appointments from './Pages/Appointments';
 import NotFound from './Pages/NotFound';
 import Home from './Pages/Home';
+import Footer from './Components/Footer';
  
 function App() {
   return (
@@ -20,7 +21,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />
-
           <Route path='/contact' element={<Contact />} />
           <Route path='/doctor' element={<Doctor />} />
           <Route path='/doctor/:speciality' element={<Doctor />} />
@@ -31,6 +31,7 @@ function App() {
           <Route path='/appointments/:docId' element={<Appointments />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
+        <Footer/>
       </div>
     </>
   );
